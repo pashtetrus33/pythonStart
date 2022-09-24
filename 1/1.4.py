@@ -27,5 +27,5 @@ while True:
     print(f'\n-A ({xA},{yA}); B ({xB},{yB}) -> {math.floor(distance*100)/100}\n')
     decision = input('Для продолжения нажмите "ENTER", для выхода "E" затем "ENTER" ')
     clear()
-    if ((decision.lower() == 'e') | (decision.lower() == 'у')):
+    if (decision.lower() == 'e') | (decision.lower() == 'у'):
         break

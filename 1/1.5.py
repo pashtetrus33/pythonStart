@@ -10,7 +10,7 @@ for x in range(0,2):
     for y in range (0,2):
         for z in range(0,2):
             print()
-            if (not (x | y | z)) == ((not x) & (not y) & (not z)):
+            if not (x or y or z) == (not x and not y and not z):
                 sleep(1) 
                 print (f'Для X = {x}, Y = {y}, Z = {z} -> Утверждение истинно!')
             else:

@@ -17,17 +17,17 @@ def inputInt(prompt=None):  # метод проверки на ввод цело
             clear()
 while True:
     number = inputInt('Программа принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.\n\nВведите целое число от 1 до 7: ')
-    if ((number < 1) | (number > 7)):
+    if (number < 1) or (number > 7):
         print('Ошибка. Ожидалось целое число от 1 до 7.')
         sleep(2)
         clear()
         continue 
-    if ((number != 6) & (number != 7)):
+    if (number != 6) and (number != 7):
         print(f'- {number} -> нет') 
     else:
         print(f'- {number} -> да')
     print()
     decision = input('Для продолжения нажмите "ENTER", для выхода "E" затем "ENTER" ')
     clear()
-    if ((decision.lower() == 'e') | (decision.lower() == 'у')):
+    if (decision.lower() == 'e') | (decision.lower() == 'у'):
         break

@@ -20,15 +20,15 @@ while True:
         quarter = inputInt('Программа по заданному номеру четверти показывает диапазон возможных координат точек в этой четверти (x и y).\n\nВведите номер четверти (1-4): ')
         continue
     print()
-    if (quarter == 1):
+    if quarter == 1:
         print(f'- x > 0; y > 0') 
-    elif (quarter == 2):
+    elif quarter == 2:
         print(f'- x < 0; y > 0') 
-    elif (quarter == 3):
+    elif quarter == 3:
         print(f'- x < 0; y < 0')
     else:
         print(f'- x > 0; y < 0')
     decision = input('\nДля продолжения нажмите "ENTER", для выхода "E" затем "ENTER" ')
     clear()
-    if ((decision.lower() == 'e') | (decision.lower() == 'у')):
+    if (decision.lower() == 'e') | (decision.lower() == 'у'):
         break

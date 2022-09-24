@@ -22,5 +22,5 @@ while True:
     print()
     decision = input('Для продолжения нажмите "ENTER", для выхода "E" затем "ENTER" ')
     clear()
-    if ((decision.lower() == 'e') | (decision.lower() == 'у')):
+    if (decision.lower() == 'e') | (decision.lower() == 'у'):
         break

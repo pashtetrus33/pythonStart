@@ -25,15 +25,15 @@ while True:
         y = inputInt('Введите координату Y (!=0): ')
         continue
     print()
-    if ((x > 0) & (y > 0)):
+    if (x > 0) and (y > 0):
         print(f'- x={x}; y={y} -> 1') 
-    elif ((x < 0) & (y > 0)):
+    elif (x < 0) and (y > 0):
         print(f'- x={x}; y={y} -> 2')
-    elif ((x < 0) & (y < 0)):
+    elif (x < 0) and (y < 0):
         print(f'- x={x}; y={y} -> 3')
     else:
         print(f'- x={x}; y={y} -> 4')
     decision = input('\nДля продолжения нажмите "ENTER", для выхода "E" затем "ENTER" ')
     clear()
-    if ((decision.lower() == 'e') | (decision.lower() == 'у')):
+    if (decision.lower() == 'e') | (decision.lower() == 'у'):
         break
