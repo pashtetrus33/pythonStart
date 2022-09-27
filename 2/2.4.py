@@ -1,12 +1,10 @@
 # Задача 4.Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
 # Найдите произведение элементов на указанных позициях.
 # Позиции хранятся в файле file.txt в одной строке одно число.
-
 import os
 import random
 from time import sleep
 def clear(): return os.system('cls')
-
 clear()  # очистка консоли
 
 def inputInt(prompt=None):  # метод проверки на ввод целого числа
@@ -18,7 +16,6 @@ def inputInt(prompt=None):  # метод проверки на ввод цело
             print('Ошибка. Ожидалось целое число.')
             sleep(2)
             clear()
-
 while True:
     data_positions = []
     with open("file.txt") as f:

@@ -7,9 +7,7 @@ import os
 from time import sleep
 def clear(): return os.system('cls')
 
-
 clear()  # очистка консоли
-
 
 def inputFloat(prompt=None):  # метод проверки на ввод вещественного числа
     while True:
@@ -20,7 +18,6 @@ def inputFloat(prompt=None):  # метод проверки на ввод вещ
             print('Ошибка. Ожидалось вещественное число.')
             sleep(2)
             clear()
-
 
 while True:
     float_number = inputFloat('Программа принимает на вход вещественное число и показывает сумму его цифр.\nВведите вещественное число: ')

@@ -1,5 +1,4 @@
 # Задача 5.Реализуйте алгоритм перемешивания списка.
-
 import os
 import random
 from secrets import randbelow
@@ -7,7 +6,6 @@ from time import sleep
 def clear(): return os.system('cls')
 
 clear()  # очистка консоли
-
 def inputInt(prompt=None):  # метод проверки на ввод целого числа
     while True:
         s = input(prompt)
@@ -17,13 +15,11 @@ def inputInt(prompt=None):  # метод проверки на ввод цело
             print('Ошибка. Ожидалось целое число.')
             sleep(2)
             clear()
-
 def mix (x):
     for i in reversed(range(1, len(x))):
         #Return a random int in the range [0, n)
         j = randbelow(i + 1)
         x[i], x[j] = x[j], x[i]
-
 while True:
     data_positions = []
     with open("file.txt") as f:
