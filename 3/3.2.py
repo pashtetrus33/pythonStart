@@ -23,7 +23,7 @@ while True:
     max = inputInt('Введите максимальное значение элементов в списке: ')
     if min > max:
         min,max = max,min
-    list_numbers = []
+    list_numbers = [random.randint(min, max)]
     multiplies =[]
     for i in range (size):
         list_numbers.append(random.randint(min, max))

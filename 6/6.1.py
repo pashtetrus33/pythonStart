@@ -1,4 +1,4 @@
-# Задача 2. Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
+# Задача 2.2 Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 # Пример:
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
@@ -19,17 +19,20 @@ def inputInt(prompt=None):  # метод проверки на ввод цело
             sleep(2)
             clear()
 
-
 while True:
     number = inputInt('Программа принимает на вход число N и выдает набор произведений чисел от 1 до N.\n\nВведите число: ')
     result = []
+    # До code review
+    
     # mult = 1
     # for i in range(1, number + 1):
     #     mult *= i
     #     result.append(mult)
     
+    # После  code review
     f = lambda x: 1 if x == 0 else x * factorial(x - 1)
     result =  list(f(i) for i in range(1, number +1))
+    
     print(f'Набор поризведений числа {number} = {result}')
     decision = input(
         'Для продолжения нажмите "ENTER", для выхода "E" затем "ENTER" ')
