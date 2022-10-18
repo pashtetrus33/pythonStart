@@ -31,6 +31,17 @@ while True:
     # After code review
     list_numbers = [random.randint(min, max) for i in range(size)]
     print(f'Cгенерированный список: {list_numbers}')
+
+    # Решение с zip:
+    list_1 = [list_numbers[x] for x in range(len(list_numbers)//2)]
+    list_2 = [list_numbers[x] for x in range(len(list_numbers)) if x > len(list_numbers)//2]
+    list_2.reverse()
+    print(list_1)
+    print(list_2)
+    print(list(zip(list_1,list_2)))
+    
+    #print(list(zip(list_numbers,)))
+
     # Before code review
     # for i in range(len(list_numbers)//2):
     #     multiplies.append(list_numbers[i]*list_numbers[-i-1])
