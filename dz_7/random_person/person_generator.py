@@ -4,7 +4,7 @@ from secrets import choice
 
 def get_surname(sex):
     with open ('dz_7\\random_person\\surnames.txt',encoding="utf8") as sur:
-            surnames = list(sur)
+        surnames = list(sur)
     if sex:
         return choice(surnames)[:-1]
     else:

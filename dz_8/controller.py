@@ -1,8 +1,10 @@
 import os
+from time import sleep
 import model
 import view
 import text_file_creater as txt
 import html_file_creater as html
+from progress.bar import ShadyBar
 
 FILENAME_CSV = 'dz_8\\students.csv'
 FILENAME_TXT = 'dz_8\\students.txt'
@@ -65,10 +67,14 @@ def switch_choice(choice):
         show_menu()
     elif choice == 11:
         n = model.input_int()
+        bar = ShadyBar('Processing', max = n)
         for i in range(n):
             data = view.add_random_record()
-            print('Запись(и) добавлена(ы).')
             model.write_csv(FILENAME_CSV,'a', data)
+        for i in range(n):
+            sleep(0.05)
+            bar.next()
+        bar.finish()
         show_menu()
     elif choice == 12:
         model.write_csv(FILENAME_CSV,'w')

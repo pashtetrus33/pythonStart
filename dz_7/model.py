@@ -51,7 +51,7 @@ def read_csv(filename: str) -> list:
 def write_csv(filename,mode, data = None):
     with open(filename, mode, encoding= 'utf-8') as file:
         if data != None:
-            file.write('{},{},{},{},{},\n'.format(data[0],data[1], data[2],data[3],data[4]))
+            file.write('{},{},{},{},{}\n'.format(data[0],data[1], data[2],data[3],data[4]))
         else:
             sleep(1)
             print('Cправочник очищен')
