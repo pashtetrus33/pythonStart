@@ -4,7 +4,6 @@ from telegram.ext import ContextTypes
 from spy import *
 from random import randint
 
-
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await log(update, context)
     await update.message.reply_text(f'Здравствуйте!\nЯ бот Павла Баканова. Команда /help выведет все мои возможности!')
@@ -35,7 +34,6 @@ async def sum_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text(f'We need 2 digits')
 
-
 async def csum_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await log(update, context)
     msg = update.message.text
@@ -59,7 +57,6 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Echo the user message."""
     await update.message.reply_text(update.message.text)
     
-
 async def guess(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f'Guess digit from 1 to 10')
     await log(update, context)
