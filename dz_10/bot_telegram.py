@@ -1,4 +1,3 @@
-import imp
 from aiogram.utils import executor
 from create_bot import dp
 from handlers import bot_commands, other
